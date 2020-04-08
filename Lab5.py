@@ -174,7 +174,7 @@ class lab5():
             print("   Збільшуємо m на 1: m = {1}+1 = {0}".format(m + 1, m))
             m += 1
             Task.equation(N, m)
-            Task.Cochran(N, m)
+            Task.cochran(N, m)
 
     def student(self, N):
         self.d = N
@@ -267,9 +267,9 @@ class lab5():
                     N = 15
                     print("\nПроведемо досліди для рівняння з квадратичними членами, тоді N =", N)
                 Task.equation(N, m)
-                Task.Cochran(N, m)
-                Task.Student(N)
-                Task.Fisher(N)
+                Task.cochran(N, m)
+                Task.student(N)
+                Task.fisher(N)
         else:
             print("   За критерієм Фішера лінійне рівняння регресії адекватне оригіналу з ймовірністю", p)
             print(N)
