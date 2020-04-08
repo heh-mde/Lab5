@@ -6,14 +6,14 @@ from _pydecimal import Decimal
 
 # ConstLab5.py
 p = 0.95  # Ймовірність для критеріїв
-m = 3  # Кількість експериментів
+m = 3  # Початкова кількість експериментів
 N = 4  # Початкова кількість дослідів
-x1min = -20
-x1max = 30
-x2min = 30
-x2max = 80
-x3min = 30
-x3max = 45
+x1min = -8
+x1max = 1
+x2min = -8
+x2max = 5
+x3min = -2
+x3max = 7
 xlist = ((x1min, x1max), (x2min, x2max), (x3min, x3max))
 rnd = 3  # Точність округлення
 
@@ -240,7 +240,7 @@ class lab5():
         self.tkr = tkr
         Task.printstud(N)
 
-    def fisher(self, N):
+    def fishers(self, N):
         dadekv = 0
         Nroz = N
         for k in range(N):
@@ -269,7 +269,7 @@ class lab5():
                 Task.equation(N, m)
                 Task.cochran(N, m)
                 Task.student(N)
-                Task.fisher(N)
+                Task.fishers(N)
         else:
             print("   За критерієм Фішера лінійне рівняння регресії адекватне оригіналу з ймовірністю", p)
             print(N)
@@ -391,4 +391,4 @@ Task = lab5(p, xlist, rnd)
 Task.equation(N, m)
 Task.cochran(N, m)
 Task.student(N)
-Task.fisher(N)
+Task.fishers(N)
